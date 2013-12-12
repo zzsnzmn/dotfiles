@@ -12,12 +12,20 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'majutsushi/tagbar'
 Bundle 'kien/ctrlp.vim'
+Bundle 'saltstack/salt-vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
 Bundle 'klen/python-mode'
+Bundle 'rking/ag.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tpope/vim-sensible'
+
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'vimwiki'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
@@ -28,6 +36,7 @@ Bundle 'FuzzyFinder'
 
 " File Types
 " ----------
+syntax on                      " syntax highlighting
 filetype on                    " required!
 filetype plugin indent on      " required!
 filetype plugin on                    " per-filetype plugins
@@ -93,11 +102,27 @@ let javascript_fold = 1                    " javascript syntax folding
 
 " Python
 " ------
-" let python_slow_sync = 1                   " slower, but syntax won't break on triple quoted strings
 let python_highlight_all = 1               " be all that you can be, python.vim
 let g:pylint_onwrite = 0
 let g:netrw_list_hide = '.*\.pyc$'
+
+" Linting --- mostly turning off the defaults
 let g:pymode_lint_write = 0
+let g:pymode_lint = 0
+let g:pytmode_lint_write = 0
+
+" Turn off rope by default
+let g:pymode_rope = 0
+
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+" Syntax Highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " adds python path to vim path, so putting the cursor over an import and
 " hitting 'gf' should jump to that module
@@ -114,6 +139,11 @@ for p in sys.path:
 EOF
 endif
 
+" Syntastic
+" ---------
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+
 
 " NERDTree
 " --------
@@ -129,6 +159,10 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_switch_buffer = 0
 
+" Indent Guides
+" -------------
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_guide_size = 1
 
 " Commands/Mappings
 " -----------------
@@ -165,6 +199,12 @@ map <Leader>jl :%!json_xs -f json -t json-pretty<cr>
 map <c-n> :cn<cr>
 
 map ,n :tabnew<cr>
+
+" Open at last edited position
+autocmd BufReadPost *[^(.git/COMMIT_EDITMSG)]
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \ exe "normal g`\"" |
+    \ endif
 
 colorscheme zellner
 
