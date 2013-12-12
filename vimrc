@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'majutsushi/tagbar'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'klen/python-mode'
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
 Bundle 'L9'
