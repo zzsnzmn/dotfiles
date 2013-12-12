@@ -80,7 +80,7 @@ set showcmd                           " show the cmdline.  not sure what it does
 set t_Co=256                          " use 256 colors
 set background=dark                   " dark terminals 420 
 set ttyfast                           " optimize for fast terminals
-set lazyredraw                        " don't redraw while executing macros or that sort of thing
+" set lazyredraw                        " don't redraw while executing macros or that sort of thing
 set ruler                             " show line and column number always
 set laststatus=2                      " always show the status line
 set title                             " set window title
@@ -142,7 +142,6 @@ endif
 " Syntastic
 " ---------
 let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
 
 
 " NERDTree
@@ -168,6 +167,12 @@ let g:indent_guides_guide_size = 1
 " -----------------
 " ^P toggles paste mode (from insert mode)
 map <C-p> :set paste!<CR>:set paste?<CR>
+
+"For all files, start at last edited position
+autocmd BufReadPost *
+           \ if line("'\"") > 0 && line("'\"") <= line("$") |
+           \ exe "normal g`\"" |
+           \ endif
 
 " ctrl-h for previous tab
 map <C-h> gT
@@ -199,12 +204,6 @@ map <Leader>jl :%!json_xs -f json -t json-pretty<cr>
 map <c-n> :cn<cr>
 
 map ,n :tabnew<cr>
-
-" Open at last edited position
-autocmd BufReadPost *[^(.git/COMMIT_EDITMSG)]
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \ exe "normal g`\"" |
-    \ endif
 
 colorscheme zellner
 
