@@ -20,6 +20,7 @@ Bundle 'klen/python-mode'
 Bundle 'rking/ag.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-sensible'
+Bundle 'davidhalter/jedi-vim'
 
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
@@ -61,6 +62,7 @@ set fencs=utf-8,shift-jis,iso-8859-1  " I guess these are the ones that I ever a
 " Misc
 " ----
 set mouse=nv                          " let the mouse do stuff
+set clipboard=unnamed                 " share system clipboard
 set bs=2                              " make backspace work like it should
 set autoread                          " automatically check for changes to the file
 set incsearch                         " turn on incremental searching
