@@ -1,3 +1,1 @@
-ln these files to their respective locations.
-
-more to come i'm sure
+Use the rsync stuff to get everything situated.
