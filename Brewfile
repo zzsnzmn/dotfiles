@@ -11,6 +11,8 @@ upgrade
 # install findutils
 # Install Bash 4
 install bash
+install tmux
+install reattach-to-user-namespace
 
 # Install wget with IRI support
 install wget --enable-iri
