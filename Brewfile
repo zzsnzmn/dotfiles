@@ -48,6 +48,12 @@ install webkit2png
 # install zopfli
 install p7zip
 
+# progamming stuffs
+install python
+
+# database stuff
+install redis
+
 # tap homebrew/versions
 # install lua52
 
