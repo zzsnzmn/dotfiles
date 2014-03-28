@@ -108,13 +108,13 @@ let python_highlight_all = 1               " be all that you can be, python.vim
 let g:pylint_onwrite = 0
 let g:netrw_list_hide = '.*\.pyc$'
 
-" Linting --- mostly turning off the defaults
-let g:pymode_lint_write = 0
+" Turn off defaults
 let g:pymode_lint = 0
+let g:pymode_lint_write = 0
+let g:pylint_onwrite = 0
 let g:pytmode_lint_write = 0
-
-" Turn off rope by default
 let g:pymode_rope = 0
+let g:pymode_run = 0
 
 " Documentation
 let g:pymode_doc = 1
@@ -160,6 +160,9 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_switch_buffer = 0
 
+" Mimic CMD+R from Sublime Text
+map <Leader>r :CtrlPBufTag<CR>
+
 " Indent Guides
 " -------------
 let g:indent_guides_auto_colors = 1
@@ -185,8 +188,8 @@ map <C-l> gt
 map <Leader>wc :%s///gn<CR>
 
 " open files with path relative to current buffer
-map <Leader>re :e <C-R>=expand("%:p:h") . "/" <CR>
-map <Leader>rt :tabnew <C-R>=expand("%:p:h") . "/" <CR>
+" map <Leader>re :e <C-R>=expand("%:p:h") . "/" <CR>
+" map <Leader>rt :tabnew <C-R>=expand("%:p:h") . "/" <CR>
 
 " command to remove trailing whitespace
 :command! Rmsp %s/\s\+$//

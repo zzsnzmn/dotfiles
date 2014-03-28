@@ -24,6 +24,7 @@ install wget --enable-iri
 
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
+install ctags
 # tap homebrew/dupes
 # install homebrew/dupes/grep
 # tap josegonzalez/homebrew-php
