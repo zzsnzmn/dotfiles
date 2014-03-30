@@ -173,6 +173,13 @@ let g:indent_guides_guide_size = 1
 " ^P toggles paste mode (from insert mode)
 map <C-p> :set paste!<CR>:set paste?<CR>
 
+" Set up powerline
+" ----------------
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+
 "For all files, start at last edited position
 autocmd BufReadPost *
            \ if line("'\"") > 0 && line("'\"") <= line("$") |
