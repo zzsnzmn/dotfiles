@@ -175,9 +175,13 @@ map <C-p> :set paste!<CR>:set paste?<CR>
 
 " Set up powerline
 " ----------------
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+if has("python")
+python << EOF
+from powerline.vim import setup as powerline_setup
+powerline_setup()
+del powerline_setup
+EOF
+endif
 
 
 "For all files, start at last edited position
