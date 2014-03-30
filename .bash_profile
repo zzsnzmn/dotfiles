@@ -15,7 +15,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 
 # powerline
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+[[ -d "/usr/local/lib/python2.7/site-packages/powerline" ]] && . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 echo "i love you"
 
