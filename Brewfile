@@ -41,6 +41,7 @@ install git
 install imagemagick --with-webp
 install lynx
 install node
+install youtube-dl
 # install pigz
 # install rename
 # install rhino

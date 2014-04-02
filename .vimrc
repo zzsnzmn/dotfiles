@@ -21,7 +21,7 @@ Bundle 'rking/ag.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-sensible'
 Bundle 'davidhalter/jedi-vim'
-
+Bundle 'vimwiki/vimwiki.git'
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
 Bundle 'L9'
@@ -161,7 +161,11 @@ let g:ctrlp_map = '<leader>t'
 let g:ctrlp_switch_buffer = 0
 
 " Mimic CMD+R from Sublime Text
-map <Leader>r :CtrlPBufTag<CR>
+map <Leader>T :CtrlPBufTag<CR>
+
+" Tagbar
+" ------
+map ,t :TagbarToggle<CR>
 
 " Indent Guides
 " -------------
