@@ -167,6 +167,11 @@ map <Leader>T :CtrlPBufTag<CR>
 " ------
 map ,t :TagbarToggle<CR>
 
+" Vimwiki
+" =======
+let g:vimwiki_list = [{'path': '~/.vimwiki/'}]
+
+
 " Indent Guides
 " -------------
 let g:indent_guides_auto_colors = 1
