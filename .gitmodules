@@ -1,4 +1,4 @@
 [submodule "bin/powerline"]
 	path = bin/powerline
 	url = git@github.com:Lokaltog/powerline.git
-	branch = master
+	branch = develop
