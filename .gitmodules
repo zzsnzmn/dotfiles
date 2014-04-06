@@ -4,5 +4,5 @@
 	branch = develop
 [submodule ".vim/bundle/vundle"]
 	path = .vim/bundle/vundle
-    url = https://github.com/gmarik/vundle.git
+    url = git@github.com:gmarik/vundle.git
 	branch = master
