@@ -35,9 +35,6 @@
 [core]
     pager = less -XFRS -x2
 
-[push]
-    default = simple
-
 [merge]
     conflictstyle = diff3
 
