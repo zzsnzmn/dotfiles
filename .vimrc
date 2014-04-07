@@ -21,15 +21,14 @@ Bundle 'rking/ag.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-sensible'
 Bundle 'davidhalter/jedi-vim'
-Bundle 'vimwiki/vimwiki.git'
+Bundle 'vimwiki/vimwiki'
+Bundle 'chrisbra/csv.vim'
+Bundle 'altercation/vim-colors-solarized'
+
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'vimwiki'
-
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
 
 " ============================================
 " Configs
@@ -96,6 +95,8 @@ set directory=/tmp,/var/tmp,~/tmp     " directory to keep swap files in
 set number                            " show line numbers
 set listchars=tab:»·,trail:·          " when 'list' option set, show hard tabs and trailing spaces
 set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
+
+colorscheme solarized 
 
 " Javascript
 " ----------
@@ -230,5 +231,4 @@ map <c-n> :cn<cr>
 
 map ,n :tabnew<cr>
 
-colorscheme zellner
 

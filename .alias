@@ -1,0 +1,6 @@
+alias p="cd ~/Projects"
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+
+alias msc="ncmpcpp"

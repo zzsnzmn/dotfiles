@@ -15,6 +15,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 
+source ~/.alias
+
 # powerline
 . ~/bin/powerline/powerline/bindings/bash/powerline.sh
 
