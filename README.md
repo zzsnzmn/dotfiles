@@ -15,3 +15,15 @@ If you're using OS X and would like to install some useful things you can downlo
 ```
 brew bundle ~/Brewfile
 ```
+
+Add local git stuff
+```
+touch ~/.gitconfig.user
+```
+
+And add something like...
+```
+[user]
+	name = USERNAME
+	email = COOLGUY@emailaddress.com 
+```
