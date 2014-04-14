@@ -23,7 +23,8 @@ install wget --enable-iri
 # install narwhal
 
 # Install more recent versions of some OS X tools
-install vim --override-system-vi
+install vim --override-system-vi --env-std
+install macvim --override-system-vi --env-std
 install ctags
 # tap homebrew/dupes
 # install homebrew/dupes/grep
