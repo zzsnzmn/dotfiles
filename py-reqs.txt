@@ -1,2 +1,3 @@
 virtualenvwrapper
 ipython
+pylint

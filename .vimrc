@@ -79,7 +79,7 @@ set nojoinspaces                      " don't use two spaces after a . when join
 set foldenable                        " enable fold
 set showcmd                           " show the cmdline.  not sure what it does other than show num of lines in visual mode
 set t_Co=256                          " use 256 colors
-set background=light                  " screen glare :'[
+set background=dark                   " screen glare :'[
 set ttyfast                           " optimize for fast terminals
 " set lazyredraw                        " don't redraw while executing macros or that sort of thing
 set ruler                             " show line and column number always
@@ -167,6 +167,10 @@ map <Leader>T :CtrlPBufTag<CR>
 " Tagbar
 " ------
 map ,t :TagbarToggle<CR>
+
+" Ag
+" --
+nmap <Leader>a :Ag!
 
 " Vimwiki
 " =======
