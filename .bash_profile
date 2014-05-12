@@ -20,11 +20,10 @@ export PROJECT_HOME=$HOME/Projects
 
 # docker...
 export DOCKER_MEMORY="1024"
+eval $(dvm env)
 
 source ~/.alias
 
 # powerline
 . ~/bin/powerline/powerline/bindings/bash/powerline.sh
-
-echo "i love you"
 

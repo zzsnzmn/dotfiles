@@ -44,5 +44,11 @@
 [push]
     default = simple
 
+[pull]
+	# pull only current branch unless specified
+	default = current
+	# only rebase divergent remotes on pull
+	rebase = true
+
 [include]
     path = .gitconfig.user
