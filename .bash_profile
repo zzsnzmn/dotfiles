@@ -1,4 +1,4 @@
-[[ $TERM != "screen-256color" ]] && export TERM=xterm-256color
+[[ $TMUX != "" ]] && export TERM=screen-256color
 export CLICOLOR=1
 
 export LANG=en_US.UTF-8
@@ -19,7 +19,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 
 # docker...
-export DOCKER_MEMORY="1024"
+export DOCKER_MEMORY="2048"
 eval $(dvm env)
 
 source ~/.alias

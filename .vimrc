@@ -10,25 +10,26 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'majutsushi/tagbar'
-Bundle 'kien/ctrlp.vim'
-Bundle 'saltstack/salt-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'klen/python-mode'
-Bundle 'rking/ag.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tpope/vim-sensible'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'vimwiki/vimwiki'
-Bundle 'chrisbra/csv.vim'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'saltstack/salt-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'klen/python-mode'
+Plugin 'rking/ag.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-sensible'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'vimwiki/vimwiki'
+Plugin 'chrisbra/csv.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'mitsuhiko/vim-jinja'
 
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 
 " ============================================
 " Configs
@@ -96,7 +97,7 @@ set number                            " show line numbers
 set listchars=tab:»·,trail:·          " when 'list' option set, show hard tabs and trailing spaces
 set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
 
-colorscheme solarized 
+colorscheme railscasts
 
 " Javascript
 " ----------
