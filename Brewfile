@@ -26,6 +26,8 @@ install wget --enable-iri
 install vim --override-system-vi --env-std
 install macvim --override-system-vi --env-std
 install ctags
+
+
 # tap homebrew/dupes
 # install homebrew/dupes/grep
 # tap josegonzalez/homebrew-php
@@ -59,6 +61,23 @@ install redis
 
 # tap homebrew/versions
 # install lua52
+
+# set up cask
+tap caskroom/cask
+install brew-cask
+
+# cask install google-chrome
+
+# set up vagrant and virtualbox
+cask install vagrant  --appdir=/Applications
+cask install virtualbox --appdir=/Applications
+
+# install docker binary
+install docker
+
+# set up dvm manager
+tap fnichol/dvm
+install dvm
 
 # Remove outdated versions from the cellar
 cleanup
