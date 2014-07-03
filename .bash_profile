@@ -24,6 +24,3 @@ eval $(dvm env)
 
 source ~/.alias
 
-# powerline
-. ~/bin/powerline/powerline/bindings/bash/powerline.sh
-
