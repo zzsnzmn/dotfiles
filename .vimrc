@@ -97,7 +97,7 @@ set number                            " show line numbers
 set listchars=tab:»·,trail:·          " when 'list' option set, show hard tabs and trailing spaces
 set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
 
-colorscheme zellner
+colorscheme railscasts
 
 " Javascript
 " ----------
