@@ -6,3 +6,7 @@
 	path = .vim/bundle/vundle
     url = git@github.com:gmarik/vundle.git
 	branch = master
+[submodule ".bash_it"]
+    path = .bash_it
+    url = git@github.com:zzsnzmn/bash-it.git
+    branch = master
