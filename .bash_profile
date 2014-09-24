@@ -58,6 +58,9 @@ export PROJECT_HOME=$HOME/Projects
 export DOCKER_MEMORY="2048"
 eval $(dvm env)
 
+# Postgres.app
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+
 source ~/.alias
 
 # Load Bash It
