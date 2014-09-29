@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
+Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'saltstack/salt-vim'
@@ -164,6 +165,14 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_switch_buffer = 0
 
+" Airline
+" -------
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#eclim#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+
 " Mimic CMD+R from Sublime Text
 map <Leader>T :CtrlPBufTag<CR>
 
@@ -192,13 +201,13 @@ map <C-p> :set paste!<CR>:set paste?<CR>
 
 " Set up powerline
 " ----------------
-if has("python")
-python << EOF
-from powerline.vim import setup as powerline_setup
-powerline_setup()
-del powerline_setup
-EOF
-endif
+" if has("python")
+" python << EOF
+" from powerline.vim import setup as powerline_setup
+" powerline_setup()
+" del powerline_setup
+" EOF
+" endif
 
 
 "For all files, start at last edited position
