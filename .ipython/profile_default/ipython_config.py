@@ -520,7 +520,6 @@ c = get_config()
 
 c.InteractiveShellApp.extensions = [
         'autoreload',
-        'powerline.bindings.ipython.post_0_11',
 ]
 
 c.InteractiveShellApp.exec_lines = ['%autoreload 2']
