@@ -1,39 +1,5 @@
 set nocompatible               " be iMproved
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-" required! 
-Plugin 'gmarik/Vundle.vim'
-
-" My Bundles here:
-"
-" original repos on github
-Plugin 'bling/vim-airline'
-Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
-Plugin 'saltstack/salt-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'klen/python-mode'
-Plugin 'rking/ag.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-sensible'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'chrisbra/csv.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'mitsuhiko/vim-jinja'
-
-" Github repos of the user 'vim-scripts'
-" => can omit the username part
-Plugin 'L9'
-Plugin 'FuzzyFinder'
-
-call vundle#end()            " required
-
 " ============================================
 " Configs
 " ============================================
@@ -98,9 +64,46 @@ set backupdir=/tmp,/var/tmp,~/tmp     " keep backup files in one place instead o
 set directory=/tmp,/var/tmp,~/tmp     " directory to keep swap files in
 set number                            " show line numbers
 set listchars=tab:»·,trail:·          " when 'list' option set, show hard tabs and trailing spaces
-set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
+" set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
 
 colorscheme railscasts
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+" required! 
+Plugin 'gmarik/Vundle.vim'
+
+" My Bundles here:
+"
+" original repos on github
+Plugin 'bling/vim-airline'
+
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'saltstack/salt-vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'klen/python-mode'
+Plugin 'rking/ag.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-sensible'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'vimwiki/vimwiki'
+Plugin 'chrisbra/csv.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'mitsuhiko/vim-jinja'
+
+" Github repos of the user 'vim-scripts'
+" => can omit the username part
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+
+call vundle#end()            " required
+
 
 " Javascript
 " ----------
@@ -134,7 +137,6 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " adds python path to vim path, so putting the cursor over an import and
 " hitting 'gf' should jump to that module
 " probably need to update this
-
 if has("python")
 python << EOF
 import os
