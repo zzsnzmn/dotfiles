@@ -75,43 +75,30 @@ call vundle#begin()
 " required! 
 Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
-"
-" original repos on github
-Plugin 'bling/vim-airline'
 
-Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
-Plugin 'saltstack/salt-vim'
 
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'klen/python-mode'
-Plugin 'rking/ag.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-sensible'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'chrisbra/csv.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'mitsuhiko/vim-jinja'
 
-" Github repos of the user 'vim-scripts'
-" => can omit the username part
 Plugin 'L9'
-Plugin 'FuzzyFinder'
 
-call vundle#end()            " required
+" ---------------------
+" PROGRAMMING LANGUAGES
+" ---------------------
 
-
+" ----------
 " Javascript
 " ----------
 let javascript_fold = 1                    " javascript syntax folding
 
-
+" ------
 " Python
 " ------
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+Plugin 'mitsuhiko/vim-jinja'
+Plugin 'saltstack/salt-vim'
+
 let python_highlight_all = 1               " be all that you can be, python.vim
 let g:pylint_onwrite = 0
 let g:netrw_list_hide = '.*\.pyc$'
@@ -150,49 +137,57 @@ endif
 
 " Syntastic
 " ---------
+Plugin 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 
 
 " NERDTree
 " --------
+Plugin 'scrooloose/nerdtree'
 let g:NERDSpaceDelims = 1                  " put space after comment delimiter
 
 " CtrlP
 " -----
-" let g:ctrlp_match_window_bottom = 0
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<leader>t'
+map <Leader>T :CtrlPBufTag<CR> 
+
+let g:ctrlp_use_caching = 0
+let g:ctrlp_switch_buffer = 0
 let g:ctrlp_custom_ignore = {
     \ 'dir': 'eggs$\|\.git$\|env/lib$\|node_modules$',
 \}
-let g:ctrlp_use_caching = 0
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_switch_buffer = 0
 
 " Airline
 " -------
+Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#eclim#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 
-" Mimic CMD+R from Sublime Text
-map <Leader>T :CtrlPBufTag<CR>
 
 " Tagbar
 " ------
+Plugin 'majutsushi/tagbar'
 map ,t :TagbarToggle<CR>
+
 
 " Ag
 " --
+Plugin 'rking/ag.vim'
 nmap <Leader>a :Ag!
 
 " Vimwiki
 " =======
+Plugin 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/.vimwiki/'}]
 
 
 " Indent Guides
 " -------------
+Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 1
 
@@ -200,16 +195,6 @@ let g:indent_guides_guide_size = 1
 " -----------------
 " ^P toggles paste mode (from insert mode)
 map <C-p> :set paste!<CR>:set paste?<CR>
-
-" Set up powerline
-" ----------------
-" if has("python")
-" python << EOF
-" from powerline.vim import setup as powerline_setup
-" powerline_setup()
-" del powerline_setup
-" EOF
-" endif
 
 
 "For all files, start at last edited position
@@ -239,14 +224,8 @@ imap <C-o> <C-p>
 " linewise select previously pasted text
 map <Leader>v V`]
 
-" de-uglify json files
-map <Leader>jl :%!json_xs -f json -t json-pretty<cr>
-
-" LEADER A TO AG
-" map <expr> <leader>a FTAckCmd()
-
 map <c-n> :cn<cr>
 
 map ,n :tabnew<cr>
 
-
+call vundle#end()            " required
