@@ -1,19 +1,11 @@
 set nocompatible               " be iMproved
 
-" ============================================
-" Configs
-" ============================================
-
-" File Types
-" ----------
-syntax on                      " syntax highlighting
-filetype on                    " required!
-filetype plugin indent on      " required!
+syntax on                             " syntax highlighting
+filetype on                           " required!
+filetype plugin indent on             " required!
 filetype plugin on                    " per-filetype plugins
 filetype indent on                    " per-filetype indent
 
-" Tabs
-" ---- 
 set autoindent                        " be smart
 set smarttab                          " also smart
 set shiftwidth=4                      " width of line-initial tab, maybe some other stuff
@@ -21,15 +13,9 @@ set shiftround
 set softtabstop=4                     " 4 space tabs (soft)
 set tabstop=4                         " 4 space tabs (hard)
 set expandtab                         " use soft tabs
-
-" Encodings
-" ---------
-set enc=utf-8                         " still don't know, really
-set fenc=utf-8                        " same
-set fencs=utf-8,shift-jis,iso-8859-1  " I guess these are the ones that I ever actually see
-
-" Misc
-" ----
+set enc=utf-8
+set fenc=utf-8
+set fencs=utf-8,shift-jis,iso-8859-1
 set mouse=nv                          " let the mouse do stuff
 set clipboard=unnamed                 " share system clipboard
 set bs=2                              " make backspace work like it should
@@ -51,7 +37,6 @@ set showcmd                           " show the cmdline.  not sure what it does
 set t_Co=256                          " use 256 colors
 set background=light                  " screen glare :'[
 set ttyfast                           " optimize for fast terminals
-" set lazyredraw                        " don't redraw while executing macros or that sort of thing
 set ruler                             " show line and column number always
 set laststatus=2                      " always show the status line
 set title                             " set window title
@@ -71,35 +56,38 @@ colorscheme railscasts
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle
-" required! 
 Plugin 'gmarik/Vundle.vim'
 
-
-
+" -----------------------------------------------------------------------------
+" MISC
+" -----------------------------------------------------------------------------
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-sensible'
-
 Plugin 'L9'
 
-" ---------------------
-" PROGRAMMING LANGUAGES
-" ---------------------
+" -----------------------------------------------------------------------------
+" Programming Utils
+" -----------------------------------------------------------------------------
 
-" ----------
+" Syntastic
+" =============================================================================
+Plugin 'scrooloose/syntastic'
+let g:syntastic_check_on_open=1
+
+
 " Javascript
-" ----------
+" =============================================================================
 let javascript_fold = 1                    " javascript syntax folding
 
-" ------
+
 " Python
-" ------
+" =============================================================================
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'saltstack/salt-vim'
 
-let python_highlight_all = 1               " be all that you can be, python.vim
+let python_highlight_all = 1
 let g:pylint_onwrite = 0
 let g:netrw_list_hide = '.*\.pyc$'
 
@@ -135,19 +123,17 @@ for p in sys.path:
 EOF
 endif
 
-" Syntastic
-" ---------
-Plugin 'scrooloose/syntastic'
-let g:syntastic_check_on_open=1
-
+" -----------------------------------------------------------------------------
+" Utilities
+" -----------------------------------------------------------------------------
 
 " NERDTree
-" --------
+" =============================================================================
 Plugin 'scrooloose/nerdtree'
 let g:NERDSpaceDelims = 1                  " put space after comment delimiter
 
 " CtrlP
-" -----
+" =============================================================================
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 map <Leader>T :CtrlPBufTag<CR> 
@@ -158,8 +144,9 @@ let g:ctrlp_custom_ignore = {
     \ 'dir': 'eggs$\|\.git$\|env/lib$\|node_modules$',
 \}
 
+
 " Airline
-" -------
+" =============================================================================
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -169,33 +156,50 @@ let g:airline#extensions#tagbar#enabled = 1
 
 
 " Tagbar
-" ------
+" =============================================================================
 Plugin 'majutsushi/tagbar'
 map ,t :TagbarToggle<CR>
 
 
 " Ag
-" --
+" =============================================================================
 Plugin 'rking/ag.vim'
 nmap <Leader>a :Ag!
 
+
 " Vimwiki
-" =======
+" =============================================================================
 Plugin 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/.vimwiki/'}]
 
 
 " Indent Guides
-" -------------
+" =============================================================================
 Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 1
 
-" Commands/Mappings
-" -----------------
+
+" -----------------------------------------------------------------------------
+" Key Bindings
+" -----------------------------------------------------------------------------
+
 " ^P toggles paste mode (from insert mode)
 map <C-p> :set paste!<CR>:set paste?<CR>
 
+" ctrl-h/ctrl-l for previous/next tab
+map <C-h> gT
+map <C-l> gt
+
+" display the number of occurences of the word under the cursor
+map <Leader>wc :%s///gn<CR>
+
+" ^O for scrolling through completion options
+imap <C-o> <C-p>
+
+map <c-n> :cn<cr>
+
+map ,n :tabnew<cr>
 
 "For all files, start at last edited position
 autocmd BufReadPost *
@@ -203,29 +207,4 @@ autocmd BufReadPost *
            \ exe "normal g`\"" |
            \ endif
 
-" ctrl-h for previous tab
-map <C-h> gT
-" ctrl-L for next tab
-map <C-l> gt
-
-" display the number of occurences of the word under the cursor
-map <Leader>wc :%s///gn<CR>
-
-" open files with path relative to current buffer
-" map <Leader>re :e <C-R>=expand("%:p:h") . "/" <CR>
-" map <Leader>rt :tabnew <C-R>=expand("%:p:h") . "/" <CR>
-
-" command to remove trailing whitespace
-:command! Rmsp %s/\s\+$//
-
-" ^O for scrolling through completion options
-imap <C-o> <C-p>
-
-" linewise select previously pasted text
-map <Leader>v V`]
-
-map <c-n> :cn<cr>
-
-map ,n :tabnew<cr>
-
-call vundle#end()            " required
+call vundle#end()
