@@ -1,3 +1,4 @@
 virtualenvwrapper
 ipython
 pylint
+honcho
