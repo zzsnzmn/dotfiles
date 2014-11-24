@@ -5,7 +5,8 @@ function doIt() {
 	rsync --exclude ".git/" --exclude "init/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
         --exclude "init.sh" --exclude "py-reqs.txt" \
         --exclude "powerline-fonts/" --exclude "iterm2-colorschemes" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
+		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~ \
+	--exclude "themes" --exclude "Brewfile"
 	source ~/.bash_profile
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
