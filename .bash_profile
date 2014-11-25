@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Load RVM, if you are using it
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+PATH=/usr/local/bin/path:$PATH
 
 # Set my editor and git editor
 export EDITOR="vim"
@@ -19,6 +18,15 @@ export CLICOLOR=1
 
 export LANG=en_US.UTF-8
 export LOCALE="UTF-8"
+
+# ruby
+
+# chef
+eval "$(chef shell-init bash)"
+
+# docker 
+# eval $(dvm env)
+export DOCKER_HOST=tcp://192.168.42.43:2375
 
 # python
 [[ -d "$HOME/Library/Python/2.7/bin" ]] && PATH="$HOME/Library/Python/2.7/bin:$PATH"

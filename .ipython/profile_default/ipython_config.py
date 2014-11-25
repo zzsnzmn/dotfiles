@@ -523,3 +523,4 @@ c.InteractiveShellApp.extensions = [
 ]
 
 c.InteractiveShellApp.exec_lines = ['%autoreload 2']
+

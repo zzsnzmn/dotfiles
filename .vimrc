@@ -51,7 +51,7 @@ set number                            " show line numbers
 set listchars=tab:»·,trail:·          " when 'list' option set, show hard tabs and trailing spaces
 " set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
 
-colorscheme Tomorrow-Night-Bright
+colorscheme blazer
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -148,7 +148,7 @@ let g:ctrlp_custom_ignore = {
 " Airline
 " =============================================================================
 Plugin 'bling/vim-airline'
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'kolor'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#eclim#enabled = 1
