@@ -26,7 +26,7 @@ eval "$(chef shell-init bash)"
 
 # docker 
 # eval $(dvm env)
-export DOCKER_HOST=tcp://192.168.42.43:2375
+# export DOCKER_HOST=tcp://192.168.42.43:2375
 
 # python
 [[ -d "$HOME/Library/Python/2.7/bin" ]] && PATH="$HOME/Library/Python/2.7/bin:$PATH"
