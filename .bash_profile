@@ -22,7 +22,7 @@ export LOCALE="UTF-8"
 # ruby
 
 # chef
-eval "$(chef shell-init bash)"
+[[ -x chef ]] && eval "$(chef shell-init bash)"
 
 # docker 
 # eval $(dvm env)
