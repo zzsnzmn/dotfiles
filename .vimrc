@@ -148,7 +148,7 @@ let g:ctrlp_custom_ignore = {
 " Airline
 " =============================================================================
 Plugin 'bling/vim-airline'
-let g:airline_theme = 'kolor'
+let g:airline_theme = 'laederon'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#eclim#enabled = 1

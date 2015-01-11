@@ -4,3 +4,4 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 
 alias msc="ncmpcpp"
+alias todo="vim ~/.todo.txt"
