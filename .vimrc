@@ -133,10 +133,8 @@ Plugin 'vim-ruby/vim-ruby'
 
 " Chef
 " =============================================================================
-Plugin "MarcWeber/vim-addon-mw-utils"
-Plugin "tomtom/tlib_vim"
-Plugin "garbas/vim-snipmate"
-Plugin "vadv/vim-chef"
+Plugin 'tomtom/tlib_vim'
+Plugin 'vadv/vim-chef'
 
 " -----------------------------------------------------------------------------
 " Utilities
