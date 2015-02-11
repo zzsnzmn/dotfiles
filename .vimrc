@@ -51,6 +51,9 @@ set number                            " show line numbers
 set listchars=tab:»·,trail:·          " when 'list' option set, show hard tabs and trailing spaces
 " set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
 
+" Set tabs by filetype
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
 colorscheme blazer
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -122,6 +125,18 @@ for p in sys.path:
         vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
 EOF
 endif
+
+
+" Ruby
+" =============================================================================
+Plugin 'vim-ruby/vim-ruby'
+
+" Chef
+" =============================================================================
+Plugin "MarcWeber/vim-addon-mw-utils"
+Plugin "tomtom/tlib_vim"
+Plugin "garbas/vim-snipmate"
+Plugin "vadv/vim-chef"
 
 " -----------------------------------------------------------------------------
 " Utilities
