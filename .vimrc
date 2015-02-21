@@ -54,7 +54,7 @@ set listchars=tab:»·,trail:·          " when 'list' option set, show hard tab
 " Set tabs by filetype
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 
-colorscheme blazer
+colorscheme solarized
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -161,7 +161,7 @@ let g:ctrlp_custom_ignore = {
 " Airline
 " =============================================================================
 Plugin 'bling/vim-airline'
-let g:airline_theme = 'laederon'
+let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#eclim#enabled = 1
