@@ -27,9 +27,6 @@ function activate_chef {
     eval "$(chef shell-init bash)"
 }
 
-# chef
-eval "$(chef shell-init bash)"
-
 # docker 
 # eval $(dvm env)
 export DOCKER_HOST=tcp://192.168.42.43:2375
