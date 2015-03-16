@@ -77,6 +77,9 @@ Plugin 'L9'
 Plugin 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 
+" Auto Complete
+" ============================================================================
+Plugin 'Valloric/YouCompleteMe'
 
 " Javascript
 " =============================================================================
@@ -85,7 +88,6 @@ let javascript_fold = 1                    " javascript syntax folding
 
 " Python
 " =============================================================================
-Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'saltstack/salt-vim'

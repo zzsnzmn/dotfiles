@@ -40,6 +40,10 @@ function activate_chef {
     eval "$(chef shell-init bash)"
 }
 
+# C#
+[ -s "kvm.sh" ] && . kvm.sh
+
+
 # Java Home
 [[ -d "/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home" ]] && export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
 
