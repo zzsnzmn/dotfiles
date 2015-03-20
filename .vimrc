@@ -76,7 +76,7 @@ Plugin 'tpope/vim-fugitive'
 
 " Syntastic
 " =============================================================================
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 
 " Auto Complete
@@ -134,6 +134,7 @@ endif
 " Ruby
 " =============================================================================
 Plugin 'vim-ruby/vim-ruby'
+leg g:syntastic_ruby_checkers = ['rubocop']
 
 " Chef
 " =============================================================================
