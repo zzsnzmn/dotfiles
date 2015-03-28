@@ -49,7 +49,6 @@ set backupdir=/tmp,/var/tmp,~/tmp     " keep backup files in one place instead o
 set directory=/tmp,/var/tmp,~/tmp     " directory to keep swap files in
 set number                            " show line numbers
 set listchars=tab:»·,trail:·          " when 'list' option set, show hard tabs and trailing spaces
-" set statusline=%f%m\ %y\ [%{&fenc}]\ (%04l/%04L,\ %02v)\ %p%%
 
 " Set tabs by filetype
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
@@ -59,6 +58,7 @@ colorscheme solarized
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Use Vundle to manage vundle (yo dawg)
 Plugin 'gmarik/Vundle.vim'
 
 " -----------------------------------------------------------------------------
@@ -67,6 +67,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-sensible'
 Plugin 'L9'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 
 " -----------------------------------------------------------------------------
 " Programming Utils
@@ -173,6 +175,7 @@ let g:airline#extensions#tagbar#enabled = 1
 
 " tmuxline
 " =============================================================================
+" fancy tmux
 Plugin 'edkolev/tmuxline.vim'
 
 
