@@ -44,6 +44,7 @@ set noerrorbells                      " DESTROY ALL BELLS
 set vb t_vb=                          " HATE BELLS
 set showmatch                         " highlight matching brackets
 set hlsearch                          " highlight search term
+set ignorecase                        " Ignore case when searching
 set showtabline=1                     " only show file tabs when more than one file open
 set backupdir=/tmp,/var/tmp,~/tmp     " keep backup files in one place instead of next to the file
 set directory=/tmp,/var/tmp,~/tmp     " directory to keep swap files in
@@ -53,7 +54,7 @@ set listchars=tab:»·,trail:·          " when 'list' option set, show hard tab
 " Set tabs by filetype
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 
-colorscheme solarized
+colorscheme strange
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -145,6 +146,12 @@ Plugin 'vadv/vim-chef'
 " Utilities
 " -----------------------------------------------------------------------------
 
+" Snipmate
+" =============================================================================
+Plugin "MarcWeber/vim-addon-mw-utils"
+Plugin "tomtom/tlib_vim"
+Plugin "garbas/vim-snipmate"
+
 " NERDTree
 " =============================================================================
 Plugin 'scrooloose/nerdtree'
@@ -166,7 +173,7 @@ let g:ctrlp_custom_ignore = {
 " Airline
 " =============================================================================
 Plugin 'bling/vim-airline'
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'zzsnzmn'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#eclim#enabled = 1

@@ -10,6 +10,10 @@ function installVundle() {
     fi
 }
 
+function updatePlugins() {
+    vim +PluginInstall +qall
+}
+
 function doIt() {
 	rsync --exclude ".git/" --exclude "init/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
         --exclude "init.sh" --exclude "py-reqs.txt" \
@@ -30,6 +34,7 @@ else
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
         installVundle
         doIt
+        updatePlugins
 	fi
 fi
 unset doIt
