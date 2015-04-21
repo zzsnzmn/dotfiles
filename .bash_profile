@@ -60,6 +60,7 @@ export DOCKER_TLS_VERIFY=
 
 # Postgres.app
 [[ -d "/Applications/Postgres.app/Contents/Versions/9.3/bin" ]] && PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+[[ -d "/Applications/Postgres.app/Contents/Versions/9.4/bin" ]] && PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # ec2 tools
 [[ -d "/usr/local/ec2/ec2-api-tools-1.7.2.3" ]] && export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.2.3 && export PATH=$PATH:$EC2_HOME/bin
