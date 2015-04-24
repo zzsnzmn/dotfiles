@@ -29,10 +29,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildmenu                          " might do nothing because of wildmode
 set wildmode=longest,list             " show menu for tab-completion
 set wildignore+=*.pyc                 " don't need dem pyc files
-set foldmethod=syntax                 " I dunno, maybe this will set up more folds automatically?
 set foldlevelstart=99                 " forces folds open by default
-set nojoinspaces                      " don't use two spaces after a . when joining lines
-set foldenable                        " enable fold
 set showcmd                           " show the cmdline.  not sure what it does other than show num of lines in visual mode
 set t_Co=256                          " use 256 colors
 set background=dark                   " screen glare :'[
