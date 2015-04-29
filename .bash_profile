@@ -40,6 +40,11 @@ function activate_chef {
     eval "$(chef shell-init bash)"
 }
 
+# could probably name this differently
+function reset_env {
+    exec bash -l
+}
+
 # C#
 [ -s "kvm.sh" ] && . kvm.sh
 
