@@ -17,9 +17,9 @@ function updatePlugins() {
 function doIt() {
 	rsync --exclude ".git/" --exclude "init/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
         --exclude "init.sh" --exclude "py-reqs.txt" \
-        --exclude "powerline-fonts/" --exclude "iterm2-colorschemes" \
+        --exclude "powerline-fonts/" --exclude "iterm2" \
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~ \
-	--exclude "themes" --exclude "Brewfile"
+        --exclude "brew_install.sh"
 	source ~/.bash_profile
 }
 
