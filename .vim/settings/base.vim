@@ -4,13 +4,6 @@ filetype plugin indent on             " required!
 filetype plugin on                    " per-filetype plugins
 filetype indent on                    " per-filetype indent
 
-set autoindent                        " be smart
-set smarttab                          " also smart
-set shiftwidth=4                      " width of line-initial tab, maybe some other stuff
-set shiftround
-set softtabstop=4                     " 4 space tabs (soft)
-set tabstop=4                         " 4 space tabs (hard)
-set expandtab                         " use soft tabs
 set enc=utf-8
 set fenc=utf-8
 set fencs=utf-8,shift-jis,iso-8859-1
