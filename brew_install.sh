@@ -33,6 +33,8 @@ brew install p7zip
 
 # progamming stuffs
 brew install python
+brew install cmake
+brew install go
 
 # database stuff
 brew install redis
@@ -52,3 +54,6 @@ brew install docker
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+pip install virtualenv
+pip install virtualenvwrapper
