@@ -45,6 +45,7 @@ let javascript_fold = 1                    " javascript syntax folding
 Plugin 'klen/python-mode'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'saltstack/salt-vim'
+Plugin 'chase/vim-ansible-yaml'
 
 let python_highlight_all = 1
 let g:pylint_onwrite = 0
@@ -105,6 +106,7 @@ Plugin 'vadv/vim-chef'
 " =============================================================================
 Plugin 'scrooloose/nerdtree'
 let g:NERDSpaceDelims = 1                  " put space after comment delimiter
+nmap T :NERDTreeToggle<CR>
 
 " CtrlP
 " =============================================================================

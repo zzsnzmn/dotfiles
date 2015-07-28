@@ -29,16 +29,14 @@ export PROJECT_HOME=$HOME/Projects
 
 # source nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # go --- should be guarded better...
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/.go
 
-# ruby/chef
-function activate_chef {
-    eval "$(chef shell-init bash)"
-}
+# rbenv
+eval "$(rbenv init -)"
 
 # could probably name this differently
 function reset_env {
