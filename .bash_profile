@@ -11,6 +11,7 @@ PATH="$HOME/bin:$PATH"
 
 # Set my editor and git editor
 export EDITOR="vim"
+eval "$(hub alias -s)"
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
@@ -67,6 +68,7 @@ export DOCKER_TLS_VERIFY=
 
 # ec2 tools
 [[ -d "/usr/local/ec2/ec2-api-tools-1.7.2.3" ]] && export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.2.3 && export PATH=$PATH:$EC2_HOME/bin
+
 
 source ~/.alias
 source ~/.secrets
