@@ -1,0 +1,82 @@
+set nocompatible
+
+source $HOME/.vim/settings/base.vim
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
+Plug 'scrooloose/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'valloric/youcompleteme'
+Plug 'dense-analysis/ale'
+Plug 'universal-ctags/ctags'
+Plug 'majutsushi/tagbar'
+
+Plug 'crusoexia/vim-monokai'
+
+" Initialize plugin system
+call plug#end()
+
+"=====================================================
+" Airline
+"=====================================================
+let g:airline_theme = 'twilight'
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#eclim#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+
+"=====================================================
+" Ale
+"=====================================================
+let b:ale_linters = ['flake8', 'pylint']
+let g:ale_sign_error = '😬'
+let g:ale_sign_warning = '😒'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+
+"=====================================================
+" Ctags
+"=====================================================
+nmap <Leader>t :TagbarToggle<CR>
+
+"=====================================================
+" Monokai
+"=====================================================
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
+
+"=====================================================
+" YCM
+"=====================================================
+nmap <Leader>g :YcmCompleter GoTo<CR>
+let g:ycm_confirm_extra_conf = 1
+
+colorscheme monokai
+
+" use 256 colors in terminal
+set t_Co=256
+set term=xterm-256color
+
+
+" Go stuff
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+
+source $HOME/.vim/settings/key-bindings.vim
+
